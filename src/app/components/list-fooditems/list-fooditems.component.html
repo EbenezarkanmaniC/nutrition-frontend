@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row" id="rows">
+    <div class="col-md-4" *ngFor="let food of foodArray">
+      <div class="card mb-4" style=" box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);">
+        <div class="card-body">
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-6 text-end">
+              <img src="{{ food.photo }}" alt="{{ food.food_name }}" class="img-fluid">              
+            </div>
+            <div class="col-md-6">
+              <h5><i><u><b> Food name </b></u></i></h5>
+              <h4 class="card-title font-weight-bold">{{ food.food_name }}</h4>
+              <h5><i><u><b> Brand name </b></u></i></h5>
+              <h4 class="card-title font-weight-bold">{{ food.brand_name }}</h4>
+              <h5><i><u><b> Brand item name</b></u></i></h5>
+              <p class="card-text">{{ food.brand_name_item_name }}</p>              
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-md-6"><button class="btn btn-info mb-2" (click)="expandToggle(food)" style=" box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);">
+              Nutrition
+            </button></div>
+            <div class="col-md-6"><button class="btn btn-success mb-2 favourit-remove" style="margin-left: 80px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);" (click)="addToFavourite(food)">
+              Add
+            </button></div>
+          </div>
+          <div *ngIf="expandToggleFlag && expandedFoodItem === food">
+            <!-- Nutrition details here -->
+            <!-- Use ngIf to show nutrition details only for the expanded item -->
+            <!-- Add your existing nutrition table here -->
+		<p>
+          Calories :  {{  food.nf_calories }}
+          </p>
+          <p>
+         Total fat : {{  food.nf_total_fat }}
+          </p>
+          <p>
+         Saturated fat : {{  food.nf_saturated_fat }}
+          </p>
+          <p>
+        Cholesterol :  {{  food.	nf_cholesterol}}
+          </p>
+          <p>
+        Sodium :  {{  food.nf_sodium }}
+          </p>
+          <p>
+         Total carbohydrate : {{  food.nf_total_fatotal_carbohydrate }}
+          </p>
+          <p>
+         Dietary fiber : {{  food.nf_dietary_fiber }}
+          </p>
+          <p>
+         Sugar : {{  food.nf_sugars }}
+           </p>
+           <p>
+          Protein : {{  food.nf_protein }}
+           </p>
+           <p>
+          Potassium : {{  food.nf_potassium }}
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

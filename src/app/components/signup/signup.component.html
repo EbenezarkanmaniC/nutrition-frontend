@@ -1,0 +1,56 @@
+<div class="login-wrapper">
+  <div class="login-container">
+   <div class="login-form">
+    <mat-card style="background-color: rgba(255, 255, 255, 0.8)">
+     <h1 style="text-align: center"><b><i>Sign Up</i></b> </h1>
+     <form (ngSubmit)="formSubmit()">
+                  <!--Username-->
+<mat-form-field style="width:100%" appearance="outline">
+  <mat-label>Username</mat-label>
+  <input [(ngModel)]="user.userName" name="userName" matInput placeholder="Enter Here" required>
+  <mat-hint *ngIf="user.userName && (user.userName.length < 5)" style="color:rgb(255, 0, 0)">Username must be at least 5 characters</mat-hint>
+ </mat-form-field>
+ <!--Password-->
+ <mat-form-field style="width:100%" appearance="outline">
+  <mat-label>Password</mat-label>
+  <input [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter Here" required>
+  <mat-hint *ngIf="user.password && (user.password.length < 8)" style="color:rgb(255, 0, 0)">Password must be at least 8 characters</mat-hint>
+ </mat-form-field>
+ <!--Phone number-->
+ <mat-form-field style="width:100%" appearance="outline">
+  <mat-label>Phone number</mat-label>
+  <input [(ngModel)]="user.phoneNumber" name="phoneNumber" matInput placeholder="Enter Here" required>
+  <mat-hint *ngIf="user.phoneNumber && !phoneNumberRegex.test(user.phoneNumber)" style="color:rgb(255, 0, 0)">Invalid phone number</mat-hint>
+ </mat-form-field>
+ <!--Email-->
+ <mat-form-field style="width:100%" appearance="outline">
+  <mat-label>Email</mat-label>
+  <input [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Enter Here" required>
+  <mat-hint *ngIf="user.email && !emailRegex.test(user.email)" style="color:rgb(255, 0, 0)">Invalid email address</mat-hint>
+ </mat-form-field>
+ <!--Country-->
+ <mat-form-field style="width:100%" appearance="outline">
+  <mat-label>Country</mat-label>
+  <input [(ngModel)]="user.country" name="country" matInput placeholder="Enter Here" required>
+  <mat-hint *ngIf="user.country && (user.country.length < 5)" style="color:rgb(255, 0, 0)">Country must be at least 5 characters</mat-hint>
+ </mat-form-field>
+      <div class="container" style="text-align: center">
+       <button type="submit" mat-raised-button style="background-color: #15E4E4">Sign Up</button>
+      </div>
+      <div class="signup-link" style="text-align: center">
+       <p>Already a user?<a routerLink="/login"> Login</a></p>
+      </div>
+               </form>
+    </mat-card>
+   </div>
+   <div class="about-section">
+    <p>Welcome to <b>NUTRITIONIX!</b> 🌟 Dive into a world of nutritional wisdom with just a tap. 🍏✨ Explore the goodness of your favorite foods, save insights, and transform your well-being effortlessly. It's time to savor the taste of a healthier life! 🌱🔍</p>
+   </div>
+  </div>
+ </div>
+
+
+
+
+
+

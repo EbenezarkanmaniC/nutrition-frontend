@@ -1,0 +1,19 @@
+.favourit-flex{
+    display: flex;
+}
+.favourit-remove{
+    margin-left: auto;
+}
+.food-image {
+    width: 100px; /* Adjust the image width as needed */
+    height: 100px; /* Adjust the image height as needed */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    margin-left: auto;
+   }
+   .nutrition-info {
+    margin-top: 10px;
+   }
+
+   #rows{
+    margin-top: 30px;
+   }

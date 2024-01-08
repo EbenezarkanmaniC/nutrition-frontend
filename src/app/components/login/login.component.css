@@ -1,0 +1,62 @@
+
+  .login-wrapper {
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .mat-form-field-invalid .error-message {
+    display: block; /* Display the error message when the field is invalid */
+   }
+   .login-container {
+    background-color: rgb(247, 247, 188);
+    display: flex;
+    width: 80%;
+    /*background-blur: blur(5px); /* Add your blur effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   }
+   .login-form {
+    flex: 1;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+   }
+   .about-section {
+    flex: 1;
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusRYcir_U2I3XRwuEEa_0eafdusjrAy9dow&usqp=CAU');
+    padding: 20px;
+    border-radius: 10px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+   }
+   .about-section p{
+    font-size: 15px;
+    align-items: center;
+   }
+   .signup-link{
+    margin-top: 20px;
+   }
+   .signup-link a {
+    font-weight: bold;
+    color: rgb(89, 63, 238);
+    text-decoration: none;
+   }
+   .signup-link a:hover {
+    text-decoration: underline;
+   }
+   
+   
+   
+   
+   

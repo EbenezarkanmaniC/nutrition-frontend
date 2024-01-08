@@ -1,0 +1,34 @@
+.div-bg {
+    margin-left: 13%;
+    width: 75%;
+    height: 75vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    background-image: url('https://www.womendailymagazine.com/wp-content/uploads/2014/09/Simple-Healthy-Diet-1.jpg');
+    position: relative;
+  }
+  .div-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for brightness */
+    backdrop-filter: blur(0.7px); /* Adjust the blur value as needed */
+  }
+  .div-content {
+    margin: 10%;
+    flex: 1;
+    width: 40%;
+    height: 55vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 1; /* Ensure content is above the background */
+  }

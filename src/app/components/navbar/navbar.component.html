@@ -1,0 +1,36 @@
+<mat-toolbar style="background-color: #FF6347">
+  <a routerLink="/home" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon>emoji_food_beverage</mat-icon>
+  </a>
+  <span><i> NutritionIx</i></span>
+  <span class="example-spacer"></span>
+  <span *ngIf="loginService.isLoggedIn() && currentUrl()=='/food'">
+   <div style="display: flex; align-items: center;">
+    <input style="border-radius: 20px;box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6); border-style: none; margin-right: 5px;font-size: 18px; text-align: center;font-style: italic;"
+     #search type="search" placeholder="Search food items">
+    <button routerLink="/food" (click)="getQuerry(search.value)" type="submit"
+     style="background-color: #ac240c; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+     border-radius: 20px; border-style: none;color: white;font-size: 15px;padding-left: 5px;">search</button>
+   </div>
+  </span>
+  <a *ngIf="loginService.isLoggedIn() && currentUrl()!='/food'" routerLink="/food" mat-icon-button class="example-icon"
+   aria-label="Example icon-button with share icon" style="margin-right: 30px;">
+   <mat-icon>emoji_food_beverage</mat-icon>
+  </a>
+  <a style="text-decoration: none;" *ngIf="loginService.isLoggedIn()" routerLink="/favourite" mat-icon-button
+   class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 150px">
+   <mat-icon>favorite_border</mat-icon>
+  </a>
+  <a (click)="logout()" *ngIf="loginService.isLoggedIn()" mat-icon-button class="example-icon"
+   aria-label="Example icon-button with share icon">
+   <mat-icon>logout</mat-icon>
+  </a>
+ </mat-toolbar>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
